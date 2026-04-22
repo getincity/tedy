@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GIC Broadband — The Future of Connectivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══════════════ CURSOR ══════════════ -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <span class="logo-icon">◈</span>
+    <span class="logo-text">GIC<span class="logo-accent">Broadband</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#story">Story</a></li>
+    <li><a href="#network">Network</a></li>
+    <li><a href="#plans">Plans</a></li>
+    <li><a href="#coverage">Coverage</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollTo('contact')">Get Connected</button>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+  <div class="grid-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>Network Online · 99.97% Uptime</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="line-1">Internet That</span>
+      <span class="line-2 gradient-text">Thinks Ahead.</span>
+      <span class="line-3">You Just Connect.</span>
+    </h1>
+    <p class="hero-sub">India's first AI-native broadband network. Faster. Smarter. Unbreakable.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('plans').scrollIntoView({behavior:'smooth'})">
+        <span>Explore Plans</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button class="btn-ghost" onclick="document.getElementById('coverage').scrollIntoView({behavior:'smooth'})">
+        <span>Check Coverage</span>
+      </button>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num" data-target="48000">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">Active Users</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="99">0</span><span class="stat-unit">.97%</span>
+        <span class="stat-label">Uptime SLA</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="10">0</span><span class="stat-unit">Gbps</span>
+        <span class="stat-label">Peak Speed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="3">0</span><span class="stat-unit">ms</span>
+        <span class="stat-label">Avg Latency</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ══════════════ STORY ══════════════ -->
+<section class="story" id="story">
+  <div class="section-tag reveal">Chapter 01</div>
+  <h2 class="section-title reveal">We Saw What Was <span class="gradient-text">Broken.</span></h2>
+
+  <div class="story-grid">
+    <div class="story-card reveal" data-delay="0">
+      <div class="story-card-num">01</div>
+      <div class="story-card-icon">⚡</div>
+      <h3>The Problem</h3>
+      <p>India had millions of internet users — and millions of dropped connections, throttled speeds, and 48-hour support tickets. Everyone was online, but nobody was truly connected.</p>
+      <div class="story-card-glow"></div>
+    </div>
+
+    <div class="story-card reveal" data-delay="150">
+      <div class="story-card-num">02</div>
+      <div class="story-card-icon">💡</div>
+      <h3>The Idea</h3>
+      <p>What if a network could predict problems before they happened? Self-heal before you notice. Route traffic with the intelligence of AI, not the bluntness of old hardware.</p>
+      <div class="story-card-glow"></div>
+    </div>
+
+    <div class="story-card reveal" data-delay="300">
+      <div class="story-card-num">03</div>
+      <div class="story-card-icon">🌐</div>
+      <h3>The Transformation</h3>
+      <p>GIC Broadband was born — a fibre backbone fused with machine intelligence. Not just fast. Adaptive. Alive. The internet reimagined from the ground up.</p>
+      <div class="story-card-glow"></div>
+    </div>
+  </div>
+
+  <div class="globe-container reveal">
+    <canvas id="globeCanvas"></canvas>
+    <div class="globe-stats">
+      <div class="gstat reveal" data-delay="0">
+        <span class="gstat-value">12</span>
+        <span class="gstat-label">Cities Covered</span>
+      </div>
+      <div class="gstat reveal" data-delay="100">
+        <span class="gstat-value">200+</span>
+        <span class="gstat-label">Exchange Points</span>
+      </div>
+      <div class="gstat reveal" data-delay="200">
+        <span class="gstat-value">∞</span>
+        <span class="gstat-label">Possibilities</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ AI NETWORK ══════════════ -->
+<section class="network" id="network">
+  <div class="section-tag reveal">Chapter 02</div>
+  <h2 class="section-title reveal">The AI <span class="gradient-text">Nervous System</span></h2>
+  <p class="section-sub reveal">Our network doesn't wait for failures. It learns, predicts, and evolves — every millisecond.</p>
+
+  <div class="network-grid">
+    <div class="net-card reveal" data-delay="0">
+      <div class="net-card-header">
+        <div class="net-icon">📡</div>
+        <div class="net-status live">LIVE</div>
+      </div>
+      <h3>Real-Time Monitoring</h3>
+      <p>Every packet. Every node. Every millisecond. Our AI scans 50,000+ network points simultaneously — catching anomalies before they become outages.</p>
+      <div class="progress-group">
+        <div class="progress-item">
+          <span>Signal Strength</span>
+          <div class="progress-bar"><div class="progress-fill" data-width="94" style="--c:#a855f7"></div></div>
+          <span>94%</span>
+        </div>
+        <div class="progress-item">
+          <span>Node Health</span>
+          <div class="progress-bar"><div class="progress-fill" data-width="98" style="--c:#06b6d4"></div></div>
+          <span>98%</span>
+        </div>
+        <div class="progress-item">
+          <span>Packet Loss</span>
+          <div class="progress-bar"><div class="progress-fill" data-width="2" style="--c:#10b981"></div></div>
+          <span>0.02%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="net-card reveal" data-delay="150">
+      <div class="net-card-header">
+        <div class="net-icon">🔀</div>
+        <div class="net-status active">ACTIVE</div>
+      </div>
+      <h3>Smart Traffic Routing</h3>
+      <p>Dynamic BGP optimization reroutes traffic around congestion in under 80ms. Your stream never buffers. Your call never drops. The network learns your patterns.</p>
+      <div class="routing-viz">
+        <div class="route-node pulse-blue"></div>
+        <div class="route-line animated"></div>
+        <div class="route-node pulse-purple"></div>
+        <div class="route-line animated delay-1"></div>
+        <div class="route-node pulse-cyan"></div>
+        <div class="route-text">Optimal path recalculated: 80ms</div>
+      </div>
+    </div>
+
+    <div class="net-card reveal" data-delay="300">
+      <div class="net-card-header">
+        <div class="net-icon">🧠</div>
+        <div class="net-status ai">AI</div>
+      </div>
+      <h3>Predictive Support</h3>
+      <p>Our ML models analyze 3 million data points per hour to predict failures 6 hours before they happen. We fix it before you feel it.</p>
+      <div class="prediction-list">
+        <div class="pred-item resolved">
+          <span class="pred-dot"></span>
+          <span>Node #4412 degradation — auto-resolved</span>
+          <span class="pred-time">3h ago</span>
+        </div>
+        <div class="pred-item resolved">
+          <span class="pred-dot"></span>
+          <span>Traffic spike predicted — rerouted</span>
+          <span class="pred-time">1h ago</span>
+        </div>
+        <div class="pred-item monitoring">
+          <span class="pred-dot orange"></span>
+          <span>Sector 7 load — monitoring</span>
+          <span class="pred-time">Now</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Dashboard -->
+  <div class="dashboard reveal">
+    <div class="dash-header">
+      <div class="dash-title">
+        <span class="live-dot"></span>
+        Live Network Dashboard
+      </div>
+      <div class="dash-time" id="dashTime"></div>
+    </div>
+    <div class="dash-grid">
+      <div class="dash-metric">
+        <span class="dm-label">Latency</span>
+        <span class="dm-value" id="latency">3<span class="dm-unit">ms</span></span>
+        <div class="dm-sparkline" id="latencySparkline"></div>
+      </div>
+      <div class="dash-metric">
+        <span class="dm-label">Uptime</span>
+        <span class="dm-value" style="color:#10b981">99.97<span class="dm-unit">%</span></span>
+        <div class="dm-bar-wrap"><div class="dm-bar" style="width:99.97%;background:#10b981"></div></div>
+      </div>
+      <div class="dash-metric">
+        <span class="dm-label">Active Nodes</span>
+        <span class="dm-value" id="nodeCount">4<span class="dm-unit">k</span></span>
+        <div class="dm-sparkline" id="nodeSparkline"></div>
+      </div>
+      <div class="dash-metric">
+        <span class="dm-label">Throughput</span>
+        <span class="dm-value" id="throughput">8.4<span class="dm-unit">Gbps</span></span>
+        <div class="dm-sparkline" id="throughputSparkline"></div>
+      </div>
+      <div class="dash-metric">
+        <span class="dm-label">AI Alerts</span>
+        <span class="dm-value" style="color:#f59e0b">2<span class="dm-unit"> resolved</span></span>
+        <div class="dm-tag">All Clear</div>
+      </div>
+      <div class="dash-metric">
+        <span class="dm-label">Packet Success</span>
+        <span class="dm-value" style="color:#a855f7">99.98<span class="dm-unit">%</span></span>
+        <div class="dm-bar-wrap"><div class="dm-bar" style="width:99.98%;background:#a855f7"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PLANS ══════════════ -->
+<section class="plans" id="plans">
+  <div class="section-tag reveal">Chapter 03</div>
+  <h2 class="section-title reveal">Choose Your <span class="gradient-text">Signal</span></h2>
+  <p class="section-sub reveal">Transparent pricing. No hidden fees. Cancel anytime.</p>
+
+  <div class="pricing-toggle reveal">
+    <span class="toggle-label">Monthly</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="billingToggle" onchange="toggleBilling()">
+      <span class="toggle-slider"></span>
+    </label>
+    <span class="toggle-label">Yearly <span class="toggle-badge">Save 20%</span></span>
+  </div>
+
+  <div class="plans-grid">
+    <div class="plan-card reveal" data-delay="0">
+      <div class="plan-name">Pulse</div>
+      <div class="plan-speed">50 Mbps</div>
+      <div class="plan-price">
+        <span class="price-sym">₹</span>
+        <span class="price-num monthly-price">499</span>
+        <span class="price-num yearly-price" style="display:none">399</span>
+        <span class="price-per">/mo</span>
+      </div>
+      <ul class="plan-features">
+        <li>✓ 50 Mbps Download</li>
+        <li>✓ 25 Mbps Upload</li>
+        <li>✓ 500GB Data</li>
+        <li>✓ Basic AI Monitoring</li>
+        <li>✓ 24/7 Support</li>
+        <li class="dim">✗ Static IP</li>
+        <li class="dim">✗ Priority Routing</li>
+      </ul>
+      <button class="plan-btn" onclick="selectPlan('Pulse')">Get Started</button>
+      <div class="plan-glow"></div>
+    </div>
+
+    <div class="plan-card popular reveal" data-delay="150">
+      <div class="popular-badge">⭐ Most Popular</div>
+      <div class="plan-name">Surge</div>
+      <div class="plan-speed">200 Mbps</div>
+      <div class="plan-price">
+        <span class="price-sym">₹</span>
+        <span class="price-num monthly-price">899</span>
+        <span class="price-num yearly-price" style="display:none">719</span>
+        <span class="price-per">/mo</span>
+      </div>
+      <ul class="plan-features">
+        <li>✓ 200 Mbps Download</li>
+        <li>✓ 100 Mbps Upload</li>
+        <li>✓ Unlimited Data</li>
+        <li>✓ Full AI Monitoring</li>
+        <li>✓ Priority Support</li>
+        <li>✓ Static IP</li>
+        <li class="dim">✗ Dedicated Node</li>
+      </ul>
+      <button class="plan-btn popular-btn" onclick="selectPlan('Surge')">Get Started</button>
+      <div class="plan-glow popular-glow"></div>
+    </div>
+
+    <div class="plan-card reveal" data-delay="300">
+      <div class="plan-name">Nova</div>
+      <div class="plan-speed">1 Gbps</div>
+      <div class="plan-price">
+        <span class="price-sym">₹</span>
+        <span class="price-num monthly-price">1799</span>
+        <span class="price-num yearly-price" style="display:none">1439</span>
+        <span class="price-per">/mo</span>
+      </div>
+      <ul class="plan-features">
+        <li>✓ 1 Gbps Download</li>
+        <li>✓ 500 Mbps Upload</li>
+        <li>✓ Unlimited Data</li>
+        <li>✓ Predictive AI Suite</li>
+        <li>✓ Dedicated Support</li>
+        <li>✓ Static IP + IPv6</li>
+        <li>✓ Dedicated Node</li>
+      </ul>
+      <button class="plan-btn" onclick="selectPlan('Nova')">Get Started</button>
+      <div class="plan-glow nova-glow"></div>
+    </div>
+
+    <div class="plan-card enterprise reveal" data-delay="450">
+      <div class="plan-name">Apex</div>
+      <div class="plan-speed">10 Gbps</div>
+      <div class="plan-price">
+        <span class="price-sym enterprise-sym">Custom</span>
+      </div>
+      <ul class="plan-features">
+        <li>✓ Up to 10 Gbps</li>
+        <li>✓ Symmetric Upload</li>
+        <li>✓ Unlimited + SLA</li>
+        <li>✓ Full AI Command</li>
+        <li>✓ Account Manager</li>
+        <li>✓ /29 IP Block</li>
+        <li>✓ Redundant Uplink</li>
+      </ul>
+      <button class="plan-btn" onclick="selectPlan('Apex')">Contact Sales</button>
+      <div class="plan-glow apex-glow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ COVERAGE ══════════════ -->
+<section class="coverage" id="coverage">
+  <div class="section-tag reveal">Chapter 04</div>
+  <h2 class="section-title reveal">Are You <span class="gradient-text">Covered?</span></h2>
+  <p class="section-sub reveal">Enter your pincode to check availability in your area instantly.</p>
+
+  <div class="coverage-checker reveal">
+    <div class="checker-box">
+      <div class="checker-input-wrap">
+        <input type="text" id="pincodeInput" class="checker-input" placeholder="Enter 6-digit pincode" maxlength="6" pattern="[0-9]{6}" oninput="this.value=this.value.replace(/\D/g,'')">
+        <button class="checker-btn" onclick="checkCoverage()">
+          <span>Check Now</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <div class="coverage-result" id="coverageResult"></div>
+    </div>
+
+    <div class="covered-zones">
+      <div class="zones-title">Currently Serving</div>
+      <div class="zones-list">
+        <span class="zone-tag">Mumbai · 400001-400104</span>
+        <span class="zone-tag">Thane · 400601-400615</span>
+        <span class="zone-tag">Pune · 411001-411048</span>
+        <span class="zone-tag">Navi Mumbai · 400701-400710</span>
+        <span class="zone-tag">Nashik · 422001-422013</span>
+        <span class="zone-tag">Aurangabad · 431001-431010</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section class="contact" id="contact">
+  <div class="section-tag reveal">Chapter 05</div>
+  <h2 class="section-title reveal">Get <span class="gradient-text">Connected</span></h2>
+  <p class="section-sub reveal">Fill in your details. Our team will reach out within 2 hours.</p>
+
+  <div class="contact-wrap">
+    <div class="contact-info reveal">
+      <div class="contact-point">
+        <div class="cp-icon">📞</div>
+        <div>
+          <div class="cp-label">Call Us</div>
+          <div class="cp-value">1800-GIC-FAST</div>
+        </div>
+      </div>
+      <div class="contact-point">
+        <div class="cp-icon">✉️</div>
+        <div>
+          <div class="cp-label">Email</div>
+          <div class="cp-value">hello@gicbroadband.in</div>
+        </div>
+      </div>
+      <div class="contact-point">
+        <div class="cp-icon">🕐</div>
+        <div>
+          <div class="cp-label">Support Hours</div>
+          <div class="cp-value">24 × 7 × 365</div>
+        </div>
+      </div>
+      <div class="contact-point">
+        <div class="cp-icon">🚀</div>
+        <div>
+          <div class="cp-label">Installation</div>
+          <div class="cp-value">Within 48 hours</div>
+        </div>
+      </div>
+    </div>
+
+    <form class="lead-form reveal" id="leadForm" onsubmit="submitLead(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="fname" placeholder="Arjun Sharma" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" id="fphone" placeholder="+91 98765 43210" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Full Address *</label>
+        <textarea id="faddress" placeholder="Flat no, Building, Street, City, Pincode" rows="3" required></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Select Plan *</label>
+          <select id="fplan" required>
+            <option value="">Choose a Plan</option>
+            <option value="Pulse">Pulse — 50 Mbps · ₹499/mo</option>
+            <option value="Surge">Surge — 200 Mbps · ₹899/mo</option>
+            <option value="Nova">Nova — 1 Gbps · ₹1799/mo</option>
+            <option value="Apex">Apex — 10 Gbps · Custom</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Install Date</label>
+          <input type="date" id="fdate">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Pincode *</label>
+        <input type="text" id="fpincode" placeholder="400001" maxlength="6" required>
+      </div>
+      <button type="submit" class="form-submit" id="formSubmit">
+        <span id="submitText">Submit Request</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <div class="form-success" id="formSuccess" style="display:none">
+        ✅ Request submitted! We'll contact you within 2 hours.
+      </div>
+      <div class="form-error" id="formError" style="display:none"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════ ADMIN PANEL ══════════════ -->
+<section class="admin-section" id="admin">
+  <div class="section-tag">Admin</div>
+  <h2 class="section-title">Admin <span class="gradient-text">Dashboard</span></h2>
+
+  <div class="admin-auth" id="adminAuth">
+    <div class="auth-box">
+      <div class="auth-icon">🔐</div>
+      <h3>Admin Access</h3>
+      <input type="email" id="adminEmail" placeholder="admin@gicbroadband.in">
+      <input type="password" id="adminPass" placeholder="Password">
+      <button class="admin-login-btn" onclick="adminLogin()">Login</button>
+      <div class="auth-error" id="authError"></div>
+    </div>
+  </div>
+
+  <div class="admin-panel" id="adminPanel" style="display:none">
+    <div class="admin-toolbar">
+      <div class="admin-user-info" id="adminUserInfo"></div>
+      <button class="admin-logout" onclick="adminLogout()">Logout</button>
+    </div>
+    <div class="admin-stats-row">
+      <div class="admin-stat-card">
+        <span class="asc-label">Total Leads</span>
+        <span class="asc-value" id="totalLeads">0</span>
+      </div>
+      <div class="admin-stat-card">
+        <span class="asc-label">Pending</span>
+        <span class="asc-value" id="pendingLeads" style="color:#f59e0b">0</span>
+      </div>
+      <div class="admin-stat-card">
+        <span class="asc-label">Installed</span>
+        <span class="asc-value" id="installedLeads" style="color:#10b981">0</span>
+      </div>
+    </div>
+    <div class="admin-table-wrap">
+      <table class="admin-table" id="leadsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Plan</th>
+            <th>Pincode</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="leadsBody">
+          <tr><td colspan="8" class="no-leads">Login to view leads</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:1rem">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">GIC<span class="logo-accent">Broadband</span></span>
+      </div>
+      <p>India's first AI-native broadband network. Building the internet of tomorrow, today.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="Instagram">◉</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+      <a href="#">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="#plans">Home Plans</a>
+      <a href="#plans">Business Plans</a>
+      <a href="#network">AI Network</a>
+      <a href="#coverage">Coverage</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Help Center</a>
+      <a href="#">Network Status</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#admin">Admin Portal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 GIC Broadband Pvt Ltd. All rights reserved.</span>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════ AI CHATBOT ══════════════ -->
+<div class="chatbot-trigger" id="chatbotTrigger" onclick="toggleChatbot()">
+  <div class="chatbot-pulse"></div>
+  <span>🤖</span>
+</div>
+
+<div class="chatbot-window" id="chatbotWindow" style="display:none">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <div class="chat-avatar">🤖</div>
+      <div>
+        <div class="chat-name">GIC Assistant</div>
+        <div class="chat-status-dot">● Online</div>
+      </div>
+    </div>
+    <button class="chat-close" onclick="toggleChatbot()">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot">
+      <div class="msg-bubble">Hi! I'm your GIC AI assistant. Ask me anything — like "Which plan is best for streaming?" or "Do you cover Thane?"</div>
+    </div>
+  </div>
+  <div class="chat-input-wrap">
+    <input type="text" id="chatInput" class="chat-input" placeholder="Ask anything..." onkeydown="if(event.key==='Enter') sendChat()">
+    <button class="chat-send" onclick="sendChat()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- Firebase SDK -->
+<script type="module" src="firebase-init.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
